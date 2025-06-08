@@ -1,0 +1,29 @@
+### Crear un nuevo autor
+POST http://localhost:3000/api/autores
+Content-Type: application/json
+
+{
+    "nombre": "Carlos Sobrados",
+    "email": "carlosSobrados@gmail.com",
+    "imagen": "https://example.com/carlos_sobrados.jpg"
+}
+
+### Obtener todos los autores
+GET http://localhost:3000/api/autores
+
+### Crear un nuevo post
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+    "titulo": "Mi primer post",
+    "descripcion": "Este es el contenido de mi primer post.",
+    "categoria": "Tecnología",
+    "autor_id": 1
+}
+
+### Obtener todos los posts (debería incluir datos del autor)
+GET http://localhost:3000/api/posts
+
+### Obtener posts de un autor específico (reemplaza 1 con el ID del autor)
+GET http://localhost:3000/api/posts/autor/1
